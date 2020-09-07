@@ -7,6 +7,8 @@ It is an iterative local search optimization algorithm. Based on a given startin
 
 ## Example (Quadratic assignment problem)
 
+The full source code of the example is provided in the source folder.
+
 We consider 5 locations. The distances between the locations are recorded in a distance-matrix
 
 | d(i,j) | A | B | C | D | E |
