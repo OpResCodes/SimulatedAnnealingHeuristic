@@ -6,8 +6,6 @@ namespace SimnOpt.Heuristics.Example
 {
     public class QuadAssignment : ISimAnSolution
     {
-        
-
         /// <summary>
         /// Material flow between two units
         /// </summary>
@@ -29,7 +27,7 @@ namespace SimnOpt.Heuristics.Example
         }
         
         /// <summary>
-        /// Calculates the total transporteffort 
+        /// Calculates the total transport performance
         /// (expected material flow multiplied with the distances)
         /// </summary>
         public void CalculateFitness()

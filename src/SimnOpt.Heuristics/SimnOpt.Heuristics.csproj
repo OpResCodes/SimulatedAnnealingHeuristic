@@ -2,6 +2,25 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>SimnOpt.Heuristics</PackageId>
+    <Authors>Matthes Koch</Authors>
+    <Product>Simulated Annealing Heuristic</Product>
+    <Description>Provides basic classes to easily implement a simulated annealing optimization</Description>
+    <PackageProjectUrl>https://github.com/OpResCodes/SimulatedAnnealingHeuristic</PackageProjectUrl>
+    <PackageIcon>Mat_Logo_white.png</PackageIcon>
+    <RepositoryUrl>https://github.com/OpResCodes/SimulatedAnnealingHeuristic</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>Optimization, Heuristic, Operations Research</PackageTags>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\Users\matth\OneDrive\Bilder\Eigenkreationen\Mat_Logo_white.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
