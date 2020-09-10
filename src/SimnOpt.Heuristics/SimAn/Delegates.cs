@@ -1,6 +1,5 @@
 ﻿namespace SimnOpt.Heuristics.SimAn
 {
-
     /// <summary>
     /// Number of iterations in which the temperature is kept constant
     /// May be dependent on the current temperature level
@@ -21,5 +20,4 @@
     /// <param name="baseSolution">The solution that the newly generated solution is based upon</param>
     /// <returns>A new feasible neighbor solution</returns>
     public delegate ISimAnSolution GenerateSolution(ISimAnSolution baseSolution);
-
 }

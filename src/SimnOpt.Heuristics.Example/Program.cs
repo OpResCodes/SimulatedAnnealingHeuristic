@@ -18,8 +18,8 @@ namespace SimnOpt.Heuristics.Example
                 {2,4,0,0,3 },
                 {4,9,6,0,0 }
             };
-            
-            double[,] distances = new double[5, 5] 
+
+            double[,] distances = new double[5, 5]
             {
                 {0,4,3,4,8 },
                 {4,0,5,8,4 },

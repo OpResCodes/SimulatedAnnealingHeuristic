@@ -20,11 +20,11 @@ namespace SimnOpt.Heuristics.SimAn
         public SimAnHeurParams(int defaultStepSize, double defaultCoolDown, double startTemp)
         {
             if (defaultStepSize <= 0)
-                throw new ArgumentException(nameof(defaultStepSize));
+                throw new ArgumentException("The value must be bigger than 0.", nameof(defaultStepSize));
             if (defaultCoolDown > 0.999 || defaultCoolDown < 0.0001)
-                throw new ArgumentException(nameof(defaultCoolDown));
+                throw new ArgumentException("The value is outside the range ]0.0001, 0.999[", nameof(defaultCoolDown));
             if (startTemp < 0)
-                throw new ArgumentException(nameof(startTemp));
+                throw new ArgumentException("The value cannot be negative" ,nameof(startTemp));
 
             //set simple default functions
             StartTemp = startTemp;
@@ -62,10 +62,12 @@ namespace SimnOpt.Heuristics.SimAn
         /// <summary>
         /// Maximum iterations (stop criterion)
         /// </summary>
-        public int MaxIter { get { return _maxIter; }
+        public int MaxIter
+        {
+            get { return _maxIter; }
             set
             {
-                if (value <= 0 || value==int.MaxValue)
+                if (value <= 0 || value == int.MaxValue)
                     throw new ArgumentException("Positive number of iterations required.");
                 _maxIter = value;
             }
@@ -75,8 +77,8 @@ namespace SimnOpt.Heuristics.SimAn
         /// <summary>
         /// Minimum number of accepted solutions on each level (stop criterion)
         /// </summary>
-        public int MinAcceptCountPerTempLevel 
-        { 
+        public int MinAcceptCountPerTempLevel
+        {
             get { return _minAccept; }
             set
             {
@@ -91,8 +93,8 @@ namespace SimnOpt.Heuristics.SimAn
         /// <summary>
         /// Maximum number of cooldowns with equal fitness values (stop criterion)
         /// </summary>
-        public int MaxCoolDownsWithoutImprovement 
-        { 
+        public int MaxCoolDownsWithoutImprovement
+        {
             get { return _maxEmptyCoolDowns; }
             set
             {
@@ -101,8 +103,5 @@ namespace SimnOpt.Heuristics.SimAn
                 _maxEmptyCoolDowns = value;
             }
         }
-
     }
-
-
 }
