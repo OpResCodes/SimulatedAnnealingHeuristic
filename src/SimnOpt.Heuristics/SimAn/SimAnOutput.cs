@@ -12,9 +12,9 @@ namespace SimnOpt.Heuristics.SimAn
     public class SimAnOutput
     {
 
-        internal SimAnOutput(ISimAnSolution finalSol, 
+        internal SimAnOutput(ISimAnSolution finalSol,
             List<double> temperatureFitness,
-            List<double> iterFitness, 
+            List<double> iterFitness,
             double initSolVal)
         {
             BestSolution = finalSol;
@@ -38,7 +38,7 @@ namespace SimnOpt.Heuristics.SimAn
         /// The sequence of fitness levels where each value represents the best found value of the iteration
         /// </summary>
         public List<double> IterationFitnessLevels { get; set; }
-        
+
         /// <summary>
         /// The number of iterations
         /// </summary>
@@ -106,6 +106,5 @@ namespace SimnOpt.Heuristics.SimAn
                 return sb.ToString();
             }
         }
-
     }
 }

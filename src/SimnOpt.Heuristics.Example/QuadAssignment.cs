@@ -1,5 +1,4 @@
 ﻿using SimnOpt.Heuristics.SimAn;
-using System;
 using System.Collections.Generic;
 
 namespace SimnOpt.Heuristics.Example
@@ -19,13 +18,13 @@ namespace SimnOpt.Heuristics.Example
         /// <summary>
         /// Assignment of unit to location
         /// </summary>
-        public Dictionary<int,int> AssignmentSolution { get; }
+        public Dictionary<int, int> AssignmentSolution { get; }
 
         public QuadAssignment()
         {
             AssignmentSolution = new Dictionary<int, int>();
         }
-        
+
         /// <summary>
         /// Calculates the total transport performance
         /// (expected material flow multiplied with the distances)
@@ -43,7 +42,7 @@ namespace SimnOpt.Heuristics.Example
                     locV = AssignmentSolution[v];
                     Fitness += MaterialFlow[u, v] * Distances[locU, locV];
                 }
-            }            
+            }
         }
 
         public double Fitness { get; set; }

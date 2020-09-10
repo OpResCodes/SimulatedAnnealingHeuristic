@@ -1,6 +1,5 @@
 ﻿namespace SimnOpt.Heuristics.SimAn
 {
-
     /// <summary>
     /// A solution to the optimization problem
     /// </summary>
@@ -11,5 +10,4 @@
         /// </summary>
         double Fitness { get; set; }
     }
-
 }

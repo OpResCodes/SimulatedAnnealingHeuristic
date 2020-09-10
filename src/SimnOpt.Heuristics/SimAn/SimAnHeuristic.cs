@@ -9,13 +9,15 @@ namespace SimnOpt.Heuristics.SimAn
     /// </summary>
     public class SimAnHeuristic
     {
-        private Random _rnd;
+        private readonly Random _rnd;
         private ISimAnSolution _bestSolution;
         private readonly ISimAnSolution _startSolution;
         private readonly SimAnHeurParams _params;
-        
+
         public SimAnHeuristic(SimAnHeurParams p, ISimAnSolution startSol, int randomSeed = 1)
         {
+            if (p == null)
+                throw new ArgumentNullException(nameof(p));
             if (p.CoolDown == null)
                 throw new ArgumentNullException("CoolDown function");
             if (p.CoolDownStepSize == null)
@@ -48,7 +50,7 @@ namespace SimnOpt.Heuristics.SimAn
                 if (AcceptNeighbor(deltaFitness, curTemp))
                 {
                     currentSolution = neighbor;
-                    accepted += 1;                    
+                    accepted += 1;
                 }
                 //improvement test
                 if (currentSolution.Fitness < _bestSolution.Fitness)
@@ -70,7 +72,7 @@ namespace SimnOpt.Heuristics.SimAn
                     //reset number of accepted solutions within plateau
                     accepted = 0;
                 }
-                stop = (stop | iter > _params.MaxIter);
+                stop = stop | iter > _params.MaxIter;
             }
             return new SimAnOutput(_bestSolution, temperatureFitnessLevels, iterationFitnessLevels, _startSolution.Fitness);
         }
@@ -119,8 +121,5 @@ namespace SimnOpt.Heuristics.SimAn
             //reject solution
             return false;
         }
-
     }
-
-
 }

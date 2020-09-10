@@ -14,7 +14,7 @@ namespace SimnOpt.Heuristics.Example
 
         public QuadAssignment GenerateNeighbor(ISimAnSolution baseSolution)
         {
-            if(!(baseSolution is QuadAssignment qaSol))
+            if (!(baseSolution is QuadAssignment qaSol))
                 return null;
             // generate a copy of the existing assignment
             QuadAssignment neighbor = new QuadAssignment();
@@ -53,14 +53,14 @@ namespace SimnOpt.Heuristics.Example
             QuadAssignment.Distances = distances;
             if (materialFlow.GetLength(0) > distances.GetLength(0))
                 throw new ArgumentException($"Not enough locations to assign all units!");
-            
+
             //setup the heuristic optimization
             SimAnHeurParams saParams = new SimAnHeurParams(defaultStepSize: 2, defaultCoolDown: 0.8, startTemp: 20);
             saParams.GenerateNeighborSolution = this.GenerateNeighbor;
-            saParams.MaxIter = (int)Math.Pow(10,6);
+            saParams.MaxIter = (int)Math.Pow(10, 6);
             //optimize
             ISimAnSolution startSolution = GenerateStartSolution();
-            SimAnHeuristic heuristic = new SimAnHeuristic(saParams,startSolution);
+            SimAnHeuristic heuristic = new SimAnHeuristic(saParams, startSolution);
             SimAnOutput output = heuristic.Minimize();
 
             Console.WriteLine("**************");
