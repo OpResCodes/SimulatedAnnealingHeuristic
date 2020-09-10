@@ -7,17 +7,22 @@
     <Product>Simulated Annealing Heuristic</Product>
     <Description>Provides basic classes to easily implement a simulated annealing optimization</Description>
     <PackageProjectUrl>https://github.com/OpResCodes/SimulatedAnnealingHeuristic</PackageProjectUrl>
-    <PackageIcon>Mat_Logo_white.png</PackageIcon>
+    <PackageIcon>Mat_Logo_128.png</PackageIcon>
     <RepositoryUrl>https://github.com/OpResCodes/SimulatedAnnealingHeuristic</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Optimization, Heuristic, Operations Research</PackageTags>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\..\..\Users\matth\OneDrive\Bilder\Eigenkreationen\Mat_Logo_white.png">
+    <None Update="Other\Mat_Logo_128.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Other\Mat_Logo_128.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
