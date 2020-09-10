@@ -2,6 +2,11 @@
 
 Flexible C# implementation of a Simulated Annealing Heuristic
 
+## Nuget Package available
+
+https://www.nuget.org/packages/SimnOpt.Heuristics/
+> Install-Package SimnOpt.Heuristics
+
 ## What is Simulated annealing?
 It is an iterative local search optimization algorithm. Based on a given starting solution to an optimization problem, simulated annealing tries to find improvements to an objective criterion (for example: costs, revenue, transport effort) by slightly manipulating the given solution in each iteration. A small change to a solution leads to a "neighbor" solution with a different objective value. If the neighbor improves upon the objective value of its "parent", it is accepted as the next best solution. In order to explore the search space, simulated annealing with some probability also accepts solutions that don't improve the objective value. This probability of acceptance decreases in later iterations, i.e. the search converges towards a true local search that only accepts improvements. 
 
