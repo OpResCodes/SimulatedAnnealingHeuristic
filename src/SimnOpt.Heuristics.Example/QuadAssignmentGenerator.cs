@@ -55,9 +55,9 @@ namespace SimnOpt.Heuristics.Example
                 throw new ArgumentException($"Not enough locations to assign all units!");
             
             //setup the heuristic optimization
-            SimAnHeurParams saParams = new SimAnHeurParams(defaultStepSize: 2, defaultCoolDown: 0.8, startTemp: 20);
+            SimAnHeurParams saParams = new SimAnHeurParams(defaultStepSize: 5, defaultCoolDown: 0.95, startTemp: 35);
             saParams.GenerateNeighborSolution = this.GenerateNeighbor;
-            saParams.MaxIter = (int)Math.Pow(10,6);
+            saParams.MaxIter = (int)Math.Pow(10,4);
             //optimize
             ISimAnSolution startSolution = GenerateStartSolution();
             SimAnHeuristic heuristic = new SimAnHeuristic(saParams,startSolution);
