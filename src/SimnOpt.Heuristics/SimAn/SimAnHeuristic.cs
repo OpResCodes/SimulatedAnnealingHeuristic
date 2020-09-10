@@ -16,14 +16,14 @@ namespace SimnOpt.Heuristics.SimAn
 
         public SimAnHeuristic(SimAnHeurParams p, ISimAnSolution startSol, int randomSeed = 1)
         {
-            if (p == null)
+            if(p == null)
                 throw new ArgumentNullException(nameof(p));
             if (p.CoolDown == null)
-                throw new ArgumentNullException("CoolDown function");
+                throw new ArgumentNullException(nameof(p), "CoolDown of the SimAnHeurParams is null.");
             if (p.CoolDownStepSize == null)
-                throw new ArgumentNullException("CoolDown step size");
+                throw new ArgumentNullException(nameof(p), "CoolDownStepSize of the SimAnHeurParams is null.");
             if (p.GenerateNeighborSolution == null)
-                throw new ArgumentNullException("GenerateNeighborSolution");
+                throw new ArgumentNullException(nameof(p), "GenerateNeighborSolution of the SimAnHeurParams is null.");
 
             _params = p;
             _startSolution = startSol;

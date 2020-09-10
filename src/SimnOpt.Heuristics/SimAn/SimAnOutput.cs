@@ -37,7 +37,7 @@ namespace SimnOpt.Heuristics.SimAn
         /// <summary>
         /// The sequence of fitness levels where each value represents the best found value of the iteration
         /// </summary>
-        public List<double> IterationFitnessLevels { get; set; }
+        public List<double> IterationFitnessLevels { get; }
 
         /// <summary>
         /// The number of iterations
@@ -71,6 +71,7 @@ namespace SimnOpt.Heuristics.SimAn
         }
 
         /// <summary>
+        /// Get a table of the iteration number and fitness value in the format:
         /// Iter;Fitness
         /// </summary>
         public string IterFitCsv

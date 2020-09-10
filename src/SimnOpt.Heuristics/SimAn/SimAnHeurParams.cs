@@ -20,11 +20,11 @@ namespace SimnOpt.Heuristics.SimAn
         public SimAnHeurParams(int defaultStepSize, double defaultCoolDown, double startTemp)
         {
             if (defaultStepSize <= 0)
-                throw new ArgumentException(nameof(defaultStepSize));
+                throw new ArgumentException("The value must be bigger than 0.", nameof(defaultStepSize));
             if (defaultCoolDown > 0.999 || defaultCoolDown < 0.0001)
-                throw new ArgumentException(nameof(defaultCoolDown));
+                throw new ArgumentException("The value is outside the range ]0.0001, 0.999[", nameof(defaultCoolDown));
             if (startTemp < 0)
-                throw new ArgumentException(nameof(startTemp));
+                throw new ArgumentException("The value cannot be negative" ,nameof(startTemp));
 
             //set simple default functions
             StartTemp = startTemp;
