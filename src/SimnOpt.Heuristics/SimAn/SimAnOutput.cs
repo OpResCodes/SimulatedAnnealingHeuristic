@@ -57,7 +57,7 @@ namespace SimnOpt.Heuristics.SimAn
         /// <summary>
         /// FinalObjective / InitialObjective
         /// </summary>
-        public double Improvement => FinalObjective / InitialObjective;
+        public double Improvement => 1.0 - (FinalObjective / InitialObjective);
 
         public override string ToString()
         {
@@ -65,7 +65,7 @@ namespace SimnOpt.Heuristics.SimAn
             sb.AppendLine($"Date: {DateTime.Now}");
             sb.AppendLine($"Initial Objective: {InitialObjective:N4}");
             sb.AppendLine($"Final Objective: {FinalObjective:N4}");
-            sb.AppendLine($"Initial/Final: {Improvement:N4}");
+            sb.AppendLine($"Improvement: {Improvement:N4}");
             sb.AppendLine($"Iterations: {Iterations:N0}");
             return sb.ToString();
         }
@@ -101,6 +101,7 @@ namespace SimnOpt.Heuristics.SimAn
                 int c = 0;
                 foreach (double i in TemperatureFitnessLevels)
                 {
+                    c++;
                     sb.AppendLine($"{c};{i}");
                 }
                 return sb.ToString();
