@@ -91,6 +91,7 @@ namespace SimnOpt.Heuristics.SimAn
         }
 
         /// <summary>
+        /// Get a table of the temperature level in the format:
         /// Temp-Level;Fitness
         /// </summary>
         public string TempFitCsv
